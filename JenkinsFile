@@ -1,7 +1,7 @@
 pipeline {
     agent any
     stages {
-        stage("This is the best jenkins playground stage 1") {
+        stage("This is the verybest jenkins playground stage 1") {
             steps {
                 echo "This is stage 1"
             }
