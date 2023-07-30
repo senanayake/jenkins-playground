@@ -1,9 +1,13 @@
+@Library('my-local-library') _
+import org.jenkins.MySharedLibrary
+
 pipeline {
     agent any
     stages {
         stage("This is the best jenkins playground stage 1") {
             steps {
                 echo "This is stage 1"
+                echo MySharedLibrary.sayHello()
             }
         }
         stage("Stage 2") {
