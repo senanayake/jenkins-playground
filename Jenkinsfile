@@ -3,6 +3,11 @@ pipeline {
     stages {
         stage("This is the verybest jenkins playground stage 1") {
             steps {
+                script {
+                    def currentUser = sh(returnStdout: true, script: 'whoami').trim()
+                    echo "Current user: ${currentUser}"
+                }
+                
                 echo "This is stage 1"
                 withGroovy(tool:'3.0.8') {
                     sh 'groovy --version'
