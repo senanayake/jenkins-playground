@@ -4,7 +4,7 @@ pipeline {
         stage("This is the verybest jenkins playground stage 1") {
             steps {
                 echo "This is stage 1"
-                withGroovy(tool:'4.0.9') {
+                withGroovy(tool:'3.0.8') {
                     sh 'groovy --version'
                 }
                 
