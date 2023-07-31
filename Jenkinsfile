@@ -11,6 +11,7 @@ pipeline {
                     env | grep -e PATH -e JAVA_HOME
                     which java
                     java -version
+                    echo $JAVA_HOME
                 '''
                 
             }
