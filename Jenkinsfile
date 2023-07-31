@@ -25,7 +25,7 @@ pipeline {
                 withGroovy(tool:'3.0.8') {
                     sh 'groovy --version'
                     for (int i = 1; i <= 10; i++) {
-                        println(i)
+                        echo i
                     }
                     
                 }                
