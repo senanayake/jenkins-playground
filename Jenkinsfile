@@ -1,3 +1,5 @@
+@Library('jenkins-sharedlib') _
+
 pipeline {
     agent any
     environment {
