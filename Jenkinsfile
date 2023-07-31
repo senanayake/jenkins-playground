@@ -37,26 +37,7 @@ pipeline {
         stage("Stage 3") {
             steps {
                 echo "This is stage 3"
-                withGroovy{
-                   script {
-                        // Define a Groovy class
-                        class MyGroovyClass {
-                            String message
-    
-                            MyGroovyClass(String msg) {
-                                message = msg
-                            }
-    
-                            void printMessage() {
-                                echo message
-                            }
-                        }
-    
-                        // Create an instance of the class and use it
-                        def myInstance = new MyGroovyClass("Hello, this is my Groovy class!")
-                        myInstance.printMessage()
-                    }
-                }
+
             }
         }
         stage("Stage 4") {
