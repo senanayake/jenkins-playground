@@ -18,6 +18,9 @@ pipeline {
         stage("Stage 2") {
             steps {
                 echo "This is stage 2"
+                withGroovy(tool:'3.0.8') {
+                    sh 'groovy --version'
+                }                
             }
         }
         stage("Stage 3") {
