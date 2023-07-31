@@ -23,12 +23,11 @@ pipeline {
             steps {
                 echo "This is stage 2"
                 withGroovy(tool:'3.0.8') {
-                    sh 'groovy --version'
-                    for (int i = 1; i <= 10; i++) {
-                        echo i
-                    }
-                    
-                }                
+                    sh 'groovy --version'                    
+                }
+                for (int i = 1; i <= 10; i++) {
+                    echo i
+                }
             }
         }
         stage("Stage 3") {
