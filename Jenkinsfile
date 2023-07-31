@@ -1,4 +1,5 @@
 @Library('jenkins-sharedlib') _
+import org.jenkins.MySharedLibrary
 
 pipeline {
     agent any
@@ -39,6 +40,7 @@ pipeline {
         stage("Stage 3") {
             steps {
                 echo "This is stage 3"
+                echo MySharedLibrary.sayHello()
 
             }
         }
