@@ -25,10 +25,12 @@ pipeline {
                 withGroovy(tool:'3.0.8') {
                     sh 'groovy --version'                    
                 }
-                script{
-                    for (int i = 1; i <= 10; i++) {
-                        echo i
-                    }                
+                withGroovy {
+                    script{
+                        for (int i = 1; i <= 10; i++) {
+                            println(i)
+                        }                
+                    }
                 }
             }
         }
