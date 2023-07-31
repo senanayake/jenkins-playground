@@ -7,11 +7,11 @@ pipeline {
                     def currentUser = sh(returnStdout: true, script: 'whoami').trim()
                     echo "Current user: ${currentUser}"
                 }
-                
-                echo "This is stage 1"
-                withGroovy(tool:'3.0.8') {
-                    sh 'groovy --version'
-                }
+                sh '''
+                    env | grep -e PATH -e JAVA_HOME
+                    which java
+                    java -version
+                '''
                 
             }
         }
