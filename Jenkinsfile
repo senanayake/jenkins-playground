@@ -47,7 +47,8 @@ pipeline {
         stage("Stage 4") {
             steps {
                 echo "This is stage 4"
-                mycustomstep("Jenkins User")                
+                mycustomstep "Jenkins User" 
+                
             }
         }        
     }
