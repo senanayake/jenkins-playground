@@ -49,7 +49,8 @@ pipeline {
             steps {
                 echo "This is stage 4"
                 mycustomstep("Jenkins User")
-                
+                MavenService mavenS = new MavenService()
+                mavenS.Build()
             }
         }        
     }
