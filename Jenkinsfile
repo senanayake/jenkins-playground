@@ -1,5 +1,6 @@
 @Library('jenkins-sharedlib') _
 import org.jenkins.MySharedLibrary
+import org.chriscorp.devops.service.MavenService
 
 pipeline {
     agent any
