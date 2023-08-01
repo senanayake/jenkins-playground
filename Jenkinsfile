@@ -53,7 +53,7 @@ pipeline {
                     MavenService mavenS = new MavenService()
                     mavenS.Build()
                     echo "foo"
-                    echo mavenS.foo()
+                    echo Integer.toString(mavenS.foo())
                 }
             }
         }        
