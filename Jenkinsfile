@@ -52,6 +52,8 @@ pipeline {
                 script {
                     MavenService mavenS = new MavenService()
                     mavenS.Build()
+                    echo "foo"
+                    echo mavenS.foo()
                 }
             }
         }        
