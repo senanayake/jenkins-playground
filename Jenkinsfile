@@ -56,7 +56,13 @@ pipeline {
                     echo mavenS.foo().toString()
                 }
             }
-        }        
+        }
+        stage("Stage 5")  {
+            steps {
+                echo "Stage 5"
+                testfeatures()
+            }
+        }
     }
 }
 
